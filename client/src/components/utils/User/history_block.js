@@ -12,7 +12,7 @@ const UserHistoryBlock = (props) => {
                 <tr key={i}>
                     <td>{moment(product.dateOfPurchase).format("DD-MM-YYYY")}</td>
                     <td>{product.brand} {product.name}</td>
-                    <td>$ {product.price}</td>
+                    <td>&#x20B9; {product.price}</td>
                     <td>{product.quantity}</td>
                 </tr>
             ))

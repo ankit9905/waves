@@ -36,7 +36,7 @@ const UserProductBlock = ({products,removeItem}) => {
                     <div className="item">
                         <h4>Price</h4>
                         <div>
-                           $ {product.price}
+                        &#x20B9; {product.price}
                         </div>
                     </div>
                     <div className="item btn">
