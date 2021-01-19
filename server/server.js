@@ -11,11 +11,15 @@ require('dotenv').config();
 
 mongoose.Promise = global.Promise;
 mongoose.set('useCreateIndex', true);
-mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser: true,useUnifiedTopology: true });
+// mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser: true,useUnifiedTopology: true });
+
+mongoose.connect("mongodb+srv://ankit9905:ankit@yelpcamp.df7rx.mongodb.net/waves?retryWrites=true&w=majority",{useNewUrlParser: true,useUnifiedTopology: true });
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cookieParser());
+
+app.use(express.static('client/build'))
 
 cloudinary.config({
     cloud_name:process.env.CLOUD_NAME,
