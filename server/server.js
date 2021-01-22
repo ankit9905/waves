@@ -16,11 +16,11 @@ require('dotenv').config();
 
 mongoose.Promise = global.Promise;
 mongoose.set('useCreateIndex', true);
-mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser: true,useUnifiedTopology: true });
+// mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser: true,useUnifiedTopology: true });
 
  
-// Mongoose connection with mongolab
-// mongoose.connect("mongodb+srv://ankit9905:ankit@yelpcamp.df7rx.mongodb.net/waves?retryWrites=true&w=majority",{useNewUrlParser: true,useUnifiedTopology: true });
+// Mongoose connection with mongolab 
+mongoose.connect("mongodb+srv://ankit9905:ankit@yelpcamp.df7rx.mongodb.net/waves?retryWrites=true&w=majority",{useNewUrlParser: true,useUnifiedTopology: true });
 
 
 
